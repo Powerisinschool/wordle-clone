@@ -1,0 +1,8 @@
+# Commands to start on workspace startup
+tasks:
+  - init: npm install && ng run start
+    command: npm run build
+# Ports to expose on workspace startup
+ports:
+  - port: 4200
+    visibility: public
