@@ -1,0 +1,134 @@
+.settings-modal-page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    background-color: white;
+    animation: SlideIn 100ms linear;
+    z-index: 2000;
+}
+
+.content {
+    position: relative;
+    color: #000000;
+    padding: 0 32px;
+    max-width: 500px;
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.close-icon {
+    position: absolute;
+    right: 0;
+    user-select: none;
+    cursor: pointer;
+}
+
+.footnote {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    color: #787c7e;
+    font-size: 12px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-tone-4);
+    padding: 16px 0;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-tone-4);
+    padding: 16px 0;
+}
+
+.setting > .text {
+    padding-right: 8px;
+}
+
+.setting > .text > .title {
+    font-size: 18px;
+}
+
+.setting > .text > .description {
+    font-size: 12px;
+    color: #787c7e;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+a, a:visited {
+    color: #787c7e;
+}
+
+.header {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+    border-bottom: 1px solid #d3d6da;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+
+.col {
+    float: left;
+}
+
+.col.col-3 {
+    width: calc(100%/3);
+}
+
+.center {
+    text-align: center;
+}
+
+.title {
+    font-family: 'Roboto Serif', serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+}
+
+.end {
+    display: flex;
+    width: 70px;
+    justify-content: flex-end;
+}

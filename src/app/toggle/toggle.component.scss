@@ -1,0 +1,27 @@
+:host([disabled]) .switch {
+
+    opacity: 0.5;
+
+}
+.switch {
+    height: 20px;
+    width: 32px;
+    vertical-align: middle;
+    background: #878a8c;
+    border-radius: 999px;
+    display: block;
+    position: relative;
+}
+
+.knob {
+    display: block;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: calc(100% - 4px);
+    width: 50%;
+    border-radius: 8px;
+    background: #fff;
+    transform: translateX(0);
+    transition: transform 0.3s;
+}

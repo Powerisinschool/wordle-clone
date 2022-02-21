@@ -1,22 +1,22 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import dictionary from './dictionary.json';
-import targetWords from './targetWords.json';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'wordle-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'wordle-game',
+  templateUrl: './wordle.component.html',
+  styleUrls: ['./wordle.component.scss']
 })
-export class AppComponent {
-  title = 'wordle';
-  @ViewChild('settings') settingsElement?: ElementRef<HTMLDivElement>;
-  openSettings = () => {
-    this.settingsElement!.nativeElement.style.display = "flex";
-  }
-  closeSettings = () => {
-    this.settingsElement!.nativeElement.style.display = "none";
-  }
-  constructor() {
+export class WordleComponent implements OnInit {
+  gameRows = [1, 2, 3, 4, 5, 6]
+
+  letters = 'qwertyuiop,asdfghjkl,zxcvbnm';
+
+  @ViewChild('guessgrid') guessGrid?: ElementRef<HTMLDivElement>;
+
+  constructor() { }
+
+  ngAfterViewInit() {
+    let guessGridElement = this.guessGrid!.nativeElement;
+    startInteraction();
     function startInteraction() {
       document.addEventListener("click", handleMouseClick);
       document.addEventListener("keydown", handleKeyPress);
@@ -63,7 +63,16 @@ export class AppComponent {
     }
 
     function pressKey(key: string) {
-      // const nextTile = guessGrid.querySelector()
+      const activeTiles = getActiveTiles();
+      if (activeTiles.length >= 5) return;
+      const nextTile = guessGridElement.querySelector(':not([data-letter])') as HTMLElement;
+      nextTile.dataset['letter'] = key.toLowerCase();
+      nextTile.textContent = key;
+      nextTile.dataset['state'] = "active";
+    }
+
+    function getActiveTiles(): any {
+      return guessGridElement.querySelectorAll('[data-state="active"]');
     }
 
     function submitGuess() {
@@ -75,7 +84,7 @@ export class AppComponent {
     }
   }
 
-  ngAfterViewInit() {
-    this.settingsElement!.nativeElement.style.display = "none";
+  ngOnInit(): void {
   }
+
 }

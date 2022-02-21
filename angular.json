@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "wordle",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -75,7 +75,8 @@
               "browserTarget": "wordle:build:production"
             },
             "development": {
-              "browserTarget": "wordle:build:development"
+              "browserTarget": "wordle:build:development",
+              "disableHostCheck": true
             }
           },
           "defaultConfiguration": "development"

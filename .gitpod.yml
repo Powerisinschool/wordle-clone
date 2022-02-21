@@ -1,6 +1,6 @@
 # Commands to start on workspace startup
 tasks:
-  - init: npm install && ng run start
+  - init: npm install && npm run start
     command: npm run build
 # Ports to expose on workspace startup
 ports:
