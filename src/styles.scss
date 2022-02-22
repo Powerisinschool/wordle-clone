@@ -53,8 +53,36 @@ $wordle-dark-theme: mat.define-dark-theme((
 //     font-family: 'Roboto', sans-serif;
 // }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; }
 
 .pointer {
   cursor: pointer;
+}
+
+@font-face {
+  font-family: 'karnakcondensed';
+  src: url('assets/fonts/karnakcondensed-normal-700.woff2') format('woff2'),
+    url('assets/fonts/karnakcondensed-normal-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'franklin';
+  src: url('assets/fonts/franklin-normal-500.woff2') format('woff2'),
+    url('assets/fonts/franklin-normal-500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'franklin-700';
+//   src: url('assets/fonts/franklin-normal-700.woff2') format('woff2'),
+//     url('assets/fonts/franklin-normal-700.woff') format('woff');
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+body {
+  font-family: 'franklin', Roboto, "Helvetica Neue", sans-serif;
 }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import dictionary from '../dictionary.json';
 import targetWords from '../targetWords.json';
@@ -11,6 +11,7 @@ import targetWords from '../targetWords.json';
 export class WordleComponent implements OnInit {
   gameRows = [1, 2, 3, 4, 5, 6];
   letters = 'qwertyuiop,asdfghjkl,zxcvbnm';
+  @Input() dayOffset = 0;
 
   @ViewChild('guessgrid') guessGrid?: ElementRef<HTMLDivElement>;
   @ViewChild('keyboard') keyboard?: ElementRef<HTMLDivElement>;
@@ -23,10 +24,7 @@ export class WordleComponent implements OnInit {
     const keyboard = this.keyboard?.nativeElement;
     const WORD_LENGTH = 5;
     const FLIP_ANIMATION_DURATION = 500;
-    const offsetFromDate = new Date(2022, 1, 1).valueOf();
-    const msOffset = Date.now() - offsetFromDate;
-    const dayOffset = msOffset / 1000 / 60 / 60 / 24;
-    const targetWord = targetWords[Math.floor(dayOffset)];
+    const targetWord = targetWords[Math.floor(this.dayOffset)];
     console.log(targetWord);
     let guessGridElement = this.guessGrid!.nativeElement;
     startInteraction();
