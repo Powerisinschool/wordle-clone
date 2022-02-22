@@ -10,7 +10,7 @@
     z-index: 2000;
 }
 .pr-default {
-    padding-right: 6px;
+    padding-right: 12px;
 }
 
 .content {
@@ -108,6 +108,12 @@ a, a:visited {
 
 .col.col-3 {
     width: calc(100%/3);
+    height: 36px;
+    line-height: 36px;
+}
+
+.lh {
+    height: 100%;
 }
 
 .center {

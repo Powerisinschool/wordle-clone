@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    height: calc(100% - 70px);
+    height: calc(100% - 58px);
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +20,8 @@
     flex-grow: 1.2;
     overflow-x: hidden;
     overflow-y: auto;
-    margin: 20px 0;
+    // margin: 20px 0;
+    margin-bottom: 10px;
     min-width: 0;
 }
 
