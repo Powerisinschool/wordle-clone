@@ -8,6 +8,7 @@ import { GameRowComponent } from './game-row/game-row.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSnackBarModule } from '@angular/material/snack-bar'; 
 import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ToggleComponent } from './toggle/toggle.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

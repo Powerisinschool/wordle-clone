@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
-    height: calc(100% - 50px);
+    height: calc(100% - 70px);
     display: flex;
     flex-direction: column;
 }
@@ -17,9 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    flex-grow: 1.2;
     overflow-x: hidden;
     overflow-y: auto;
+    margin: 20px 0;
+    min-width: 0;
 }
 
 .board {
@@ -28,8 +30,9 @@
     grid-gap: 5px;
     padding: 10px;
     box-sizing: border-box;
-    width: 305px;
+    width: 325px;
     height: 366px;
+    min-width: 0;
 }
 
 .guess-grid {
@@ -39,8 +42,9 @@
     flex-grow: 1;
     grid-template-columns: repeat(5, 4em);
     grid-template-rows: repeat(6, 4em);
-    gap: .25em;
+    gap: .45em;
     margin-bottom: 1em;
+    min-width: 0;
 }
 
 .keyboard {
@@ -48,7 +52,7 @@
     user-select: none;
 }
 
-button {
+button.key {
     font-family: inherit;
     font-weight: bold;
     border: 0;
@@ -58,8 +62,8 @@ button {
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
-    background-color: #818384;
-    color: #ffffff;
+    background-color: #d3d6da;
+    color: black;
     flex: 1;
     display: flex;
     justify-content: center;
@@ -72,15 +76,15 @@ button {
     flex: 0.5;
 }
 
-.one-and-a-half {
+button.one-and-a-half {
     flex: 1.5;
     font-size: 12px;
 }
 
 .tile {
     font-size: 2em;
-    color: black;
-    border: .05em solid hsl(240, 2%, 23%);
+    color: white;
+    border: .085em solid #d3d6da;
     text-transform: uppercase;
     font-weight: bold;
     display: flex;
@@ -91,22 +95,23 @@ button {
 }
 
 .tile[data-state="active"] {
-    border-color: hsl(200, 1%, 34%);
+    border-color: #878a8c;
+    color: black;
 }
 
 .tile[data-state="wrong"] {
     border: none;
-    background-color: hsl(240, 2%, 23%);
+    background-color: #787c7e;
 }
 
 .tile[data-state="wrong-location"] {
     border: none;
-    background-color: hsl(49, 51%, 47%);
+    background-color: #c9b458;
 }
 
 .tile[data-state="correct"] {
     border: none;
-    background-color: hsl(115, 29%, 43%);
+    background-color: #6aaa64;
 }
 
 .tile.shake {
