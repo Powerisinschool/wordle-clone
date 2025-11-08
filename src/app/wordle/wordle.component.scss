@@ -82,6 +82,21 @@ button.one-and-a-half {
     font-size: 12px;
 }
 
+button.key.wrong {
+    background-color: #787c7e;
+    color: white;
+}
+
+button.key.wrong-location {
+    background-color: #c9b458;
+    color: white;
+}
+
+button.key.correct {
+    background-color: #6aaa64;
+    color: white;
+}
+
 .tile {
     font-size: 2em;
     color: white;
@@ -156,23 +171,23 @@ button.one-and-a-half {
 @keyframes dance {
     20% {
     transform: translateY(-50%);
-    }  
+    }
 
     40% {
     transform: translateY(5%);
-    }  
+    }
 
     60% {
     transform: translateY(-25%);
-    }  
+    }
 
     80% {
     transform: translateY(2.5%);
-    }  
+    }
 
     90% {
     transform: translateY(-5%);
-    }  
+    }
 
     100% {
     transform: translateY(0);
@@ -199,11 +214,11 @@ button.one-and-a-half {
     transition: opacity 500ms ease-in-out;
     margin-bottom: .5em;
 }
-  
+
 .alert:last-child {
     margin-bottom: 0;
 }
-  
+
 .alert.hide {
     opacity: 0;
 }
